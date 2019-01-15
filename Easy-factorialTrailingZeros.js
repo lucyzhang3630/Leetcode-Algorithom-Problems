@@ -11,7 +11,6 @@
 // Explanation: 5! = 120, one trailing zero.
 //
 // Note: Your solution should be in logarithmic time complexity.
-//test git hubs contribution part, it is not counting my commit as contribution
 
 /**
  * @param {number} n
