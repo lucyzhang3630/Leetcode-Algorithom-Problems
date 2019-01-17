@@ -99,7 +99,10 @@ var frequencySort = function(s) {
            map.set(s[i], map.get(s[i])+1);
        }
     }
+    //sort the map by value in decending order
     var sortedMap = new Map([...map.entries()].sort((a,b) => b[1]- a[1]));
+    
+    //iterate the map
     sortedMap.forEach((value,key,map)=>
                       result+=key.repeat(value))
     return result
