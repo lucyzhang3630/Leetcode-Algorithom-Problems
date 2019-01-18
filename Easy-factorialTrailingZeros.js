@@ -15,6 +15,7 @@
 /**
  * @param {number} n
  * @return {number}
+ * solution 1 using array, not working properly, when n is large
  */
 var trailingZeroes = function(n) {
     //Todo: how to handle large numbers like the factorial of 300
@@ -36,6 +37,18 @@ var trailingZeroes = function(n) {
             return result;
         }
     }
+};
 
-
+/**
+ * @param {number} n
+ * @return {number}
+ * solution 2 using Math
+ * ref: https://brilliant.org/wiki/trailing-number-of-zeros/
+ */
+var trailingZeroes = function(n) {
+    var result = 0;
+    for(var i = 1;Math.pow(5,i)<=n;i++){
+        result+=Math.floor(n/Math.pow(5,i));
+    }
+    return result
 };
