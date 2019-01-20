@@ -17,7 +17,7 @@
  * @param {number[]} nums2
  * @param {number} n
  * @return {void} Do not return anything, modify nums1 in-place instead.
- * solution 1 running 80ms
+ * solution 1 array method running 80ms
  */
 var merge = function(nums1, m, nums2, n) {
   //remove trailing 0 if any
