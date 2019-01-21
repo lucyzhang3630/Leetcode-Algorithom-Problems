@@ -18,7 +18,8 @@
  * solution 1 using array, not working properly, when n is large
  */
 var trailingZeroes = function(n) {
-    //Todo: how to handle large numbers like the factorial of 300
+    //this solution is brutal force and fails when n is large, like factorail of 300,
+    //keep this solution a record
     var factor = 1;
     var factorArr = [];
     var result = 0;
