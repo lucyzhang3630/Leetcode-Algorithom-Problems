@@ -46,3 +46,23 @@ var productExceptSelf = function(nums) {
     }
     return results
 };
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ * solution 2 two pointers without division
+ */
+var productExceptSelf = function(nums) {
+    var result = [];
+    var leftProduct = 1;
+    var rightProduct = 1;
+    for (var i=nums.length - 1; i >= 0; i--) {
+        result[i] = rightProduct;
+        rightProduct *= nums[i];
+    }
+    for (var j=0; j < nums.length; j++) {
+        result[j] *= leftProduct;
+        leftProduct *= nums[j];
+    }
+    return result;
+};
