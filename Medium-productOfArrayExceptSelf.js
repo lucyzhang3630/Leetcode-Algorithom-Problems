@@ -56,6 +56,7 @@ var productExceptSelf = function(nums) {
     var result = [];
     var leftProduct = 1;
     var rightProduct = 1;
+    //get the product of mutiplying element to the right of the each element
     for (var i=nums.length - 1; i >= 0; i--) {
         result[i] = rightProduct;
         rightProduct *= nums[i];
