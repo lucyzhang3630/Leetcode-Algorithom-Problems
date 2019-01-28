@@ -50,17 +50,18 @@ var productExceptSelf = function(nums) {
 /**
  * @param {number[]} nums
  * @return {number[]}
- * solution 2 two pointers without division
+ * solution 2 two pointers without division running 104 ms
  */
 var productExceptSelf = function(nums) {
     var result = [];
     var leftProduct = 1;
     var rightProduct = 1;
-    //get the product of mutiplying element to the right of the each element
+    //get the product of mutiplying element to the right of the element
     for (var i=nums.length - 1; i >= 0; i--) {
         result[i] = rightProduct;
         rightProduct *= nums[i];
     }
+    // get the product of mutiplying element to the left of the element
     for (var j=0; j < nums.length; j++) {
         result[j] *= leftProduct;
         leftProduct *= nums[j];
