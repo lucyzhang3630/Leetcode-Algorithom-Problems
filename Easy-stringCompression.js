@@ -22,9 +22,7 @@ var compress = function(chars) {
         }else{
             index +=1
         }
-        //console.log(i);
-        // console.log(index);
-        // console.log(chars);
+        
     }
 
     return chars.length
