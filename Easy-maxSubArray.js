@@ -12,7 +12,7 @@
 /**
  * @param {number[]} nums
  * @return {number}
- * solution 1 greedy running 76ms
+ * solution 1 greedy algorithm running 76ms
  */
 var maxSubArray = function(nums) {
     var sum = 0;
