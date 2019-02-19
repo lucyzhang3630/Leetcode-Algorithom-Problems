@@ -36,4 +36,26 @@ var maxProfit = function(prices) {
     }
     return max
 };
-// TODO: solution 2 
+// TODO: fix the logic
+/**
+ * @param {number[]} prices
+ * @return {number}
+ */
+var maxProfit = function(prices) {
+    var max = 0;
+    var i = 0;
+    var peak = prices[0];
+    var valley = prices[0];
+    while(i<prices.length-1){
+        while(i<prices.length-1&&prices[i]<=prices[i+1]){
+            valley = prices[i];
+            i++
+        }
+        while(i<prices.length-1&&prices[i]>=prices[i+1]){
+            peak = prices[i];
+            max += peak -valley;
+            i++
+        }
+    }
+    return max
+};
