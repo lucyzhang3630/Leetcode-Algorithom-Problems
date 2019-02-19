@@ -36,26 +36,22 @@ var maxProfit = function(prices) {
     }
     return max
 };
-// TODO: fix the logic
 /**
  * @param {number[]} prices
  * @return {number}
+ * solution 2 valley peak method running 80ms
  */
 var maxProfit = function(prices) {
     var max = 0;
     var i = 0;
-    var peak = prices[0];
     var valley = prices[0];
-    while(i<prices.length-1){
-        while(i<prices.length-1&&prices[i]<=prices[i+1]){
-            valley = prices[i];
-            i++
+    for(var i = 0;i<prices.length;i++){
+        //find the valley dynamicly
+        if(prices[i]>valley){
+            max += prices[i] - valley
         }
-        while(i<prices.length-1&&prices[i]>=prices[i+1]){
-            peak = prices[i];
-            max += peak -valley;
-            i++
-        }
+        valley = prices[i];
     }
+
     return max
 };
