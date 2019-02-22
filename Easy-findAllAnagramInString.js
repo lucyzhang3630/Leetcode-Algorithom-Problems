@@ -38,6 +38,7 @@ var findAnagrams = function(s, p) {
  * @return {number[]}
  * solution 2 sliding window
  * // TODO: detailed explanation needed
+ // TODO: integration of functionality
  */
 var findAnagrams = function(str, pattern) {
   // Convert pattern string to hash-map.
